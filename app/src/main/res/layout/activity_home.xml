@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Search bar with icon -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Search icon -->
+
+            <!-- Search EditText -->
+
+
+            <!-- Menu icon -->
+
+            <EditText
+                android:id="@+id/search_edittext"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-323dp"
+                android:layout_marginTop="19dp"
+                android:layout_toEndOf="@id/search_icon"
+                android:hint="Search"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="39dp"
+                android:layout_height="41dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/search" />
+
+            <ImageView
+                android:id="@+id/acc_icon"
+                android:layout_width="66dp"
+                android:layout_height="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/accicon" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Your main content here -->
+
+    <!-- Bottom Navigation View -->
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <!-- Your content inside the FrameLayout goes here -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="30dp">
+
+
+            <Button
+                android:id="@+id/btnfrock"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Frock"
+
+                />
+
+            <Button
+                android:id="@+id/btnshirt"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="FullDress" />
+
+            <Button
+                android:id="@+id/btnsariyes"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Other" />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:text="Fresh Dealis"
+            android:textColor="@color/red"
+            android:textSize="25dp"
+
+
+
+            android:layout_marginStart="19dp"
+            android:textStyle="bold"
+
+            />
+
+      <ViewFlipper
+          android:layout_width="match_parent"
+          android:layout_height="350dp"
+          android:layout_marginTop="150dp"
+          android:flipInterval="4000"
+          android:autoStart="true"
+          android:inAnimation="@android:anim/slide_in_left"
+          android:outAnimation="@android:anim/slide_out_right"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+
+          >
+
+
+          <ImageView
+              android:id="@+id/imageView4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:src="@drawable/dscount" />
+
+          <ImageView
+              android:id="@+id/imageView5"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:src="@drawable/product" />
+
+
+      </ViewFlipper>
+
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottem_nav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
